@@ -29,6 +29,8 @@ Ignore the `source not found` error. It won't matter since you will source manua
 
 ## Web Interface Control
 
+Do these fixes before starting to launch the terminals.
+
 ### export_urdf.sh fixes.
 
 Since the demo uses an uncalibrated model, patch the `cp` line for `controller_calibration_default.yaml` to use the factory-calibrated one:
@@ -43,6 +45,13 @@ cp `ros2 pkg prefix stretch_core`/share/stretch_core/config/controller_calibrati
 cd ~/ament_ws/src/stretch_web_teleop/certificates
 cp stretch-se3-local+6.pem server.crt
 cp stretch-se3-local+6-key.pem server.key
+```
+
+Then, build again to copy the certificates to the output.
+
+```bash
+cd ~/ament_ws
+colcon build
 ```
 
 Make sure to run all commands in a rooted environment (like natively on the computer or in a rooted container).
