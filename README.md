@@ -1,4 +1,4 @@
-# Lab 5
+# Robot Simulator
 
 If you are using distrobox, create the container using:
 ```bash
@@ -7,7 +7,7 @@ distrobox assemble create
 
 Then enter using:
 ```bash
-distrobox enter --root lab5
+distrobox enter --root sim
 ```
 
 ## Don't run ROS 2 workspace setup with `sudo`.
